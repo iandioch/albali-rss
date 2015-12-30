@@ -1,0 +1,1 @@
+The 2.0 standard is explained [here](http://www.rssboard.org/rss-specification), including descriptions the optional and mandatory fields of an RSS document, and links to documents complying to the previous standards (0.91 and 0.92)
