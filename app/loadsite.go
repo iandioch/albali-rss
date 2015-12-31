@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"./web"
 	"flag"
+	"./parse/xml"
 )
 
 func main() {
@@ -11,13 +12,15 @@ func main() {
 	args := flag.Args()
 	for _, arg := range args {
 		page, _ := web.LoadPage(arg)
-		fmt.Println(page)
+		//fmt.Println(page)
+		data, err := xml.Parse(page)
+
+		if err != nil {
+			fmt.Println(err)
+		}
+		fmt.Println(data)
+		fmt.Println(data.ChannelTitle)
 	}
 
-	/*page, _ := web.LoadPage("http://nwerc.eu")
-	//fmt.Println(page)
 
-	page, _ = web.LoadPage("http://mycode.doesnot.run")
-
-	fmt.Println(page)*/
 }
