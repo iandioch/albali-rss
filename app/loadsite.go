@@ -18,8 +18,12 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		fmt.Println(data)
 		fmt.Println(data.ChannelTitle)
+		fmt.Println(data.ChannelDescription)
+
+		for _, item := range data.Items {
+			fmt.Println(item.Title)
+		}
 	}
 
 
